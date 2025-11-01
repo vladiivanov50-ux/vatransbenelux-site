@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V.A. Trans Benelux</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+</head>
+<body>
+  <div id="page" class="fade-in">
+    <header>
+      <img src="images/logo.svg" alt="V.A. Trans Benelux logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#" data-section="home">Home</a></li>
+          <li><a href="#" data-section="about">Over ons</a></li>
+          <li><a href="#" data-section="services">Diensten</a></li>
+          <li><a href="#" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch">
+        <button data-lang="nl" class="active">NL</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="bg">БГ</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="content-section active">
+        <h1>Welkom bij V.A. Trans Benelux</h1>
+        <p class="slogan">Betrouwbaar. Snel. Klantgericht transport in heel Europa.</p>
+      </section>
+
+      <section id="about" class="content-section">
+        <h2>Over ons</h2>
+        <p>
+          V.A. Trans Benelux is een Europees transportbedrijf met focus op
+          kwaliteit, snelheid en persoonlijke service. Wij verzorgen
+          meubeltransport, expressritten en distributie doorheen België,
+          Nederland, Duitsland, Polen en meer.
+        </p>
+      </section>
+
+      <section id="services" class="content-section">
+        <h2>Diensten</h2>
+        <ul>
+          <li>Internationaal meubeltransport</li>
+          <li>Expresszendingen binnen de EU</li>
+          <li>Distributie en logistieke oplossingen</li>
+          <li>Betrouwbare service met tracking</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="content-section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:vatrans.benelux@gmail.com">vatrans.benelux@gmail.com</a></p>
+        <p>Tel. België: <a href="tel:+32499111536">+32 499 111 536</a></p>
+        <p>Tel. Bulgarije: <a href="tel:+359879926294">+359 879 926 294</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 V.A. Trans Benelux – Alle rechten voorbehouden</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #ffffff;
+  color: #0f3b56;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: #f8f8f8;
+  border-bottom: 2px solid #e64b3b;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0f3b56;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #e64b3b;
+}
+
+.lang-switch button {
+  margin-left: 8px;
+  padding: 5px 10px;
+  border: none;
+  background: #0f3b56;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.lang-switch button.active {
+  background: #e64b3b;
+}
+
+main {
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.content-section {
+  display: none;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-section.active {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 8px 0;
+}
+
+footer {
+  background: #0f3b56;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.fade-in {
+  animation: fadein 1.2s ease;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+// Taaldata
+const translations = {
+  nl: {
+    home: "Welkom bij V.A. Trans Benelux",
+    slogan: "Betrouwbaar. Snel. Klantgericht transport in heel Europa.",
+    about: "V.A. Trans Benelux is een Europees transportbedrijf met focus op kwaliteit, snelheid en persoonlijke service. Wij verzorgen meubeltransport, expressritten en distributie doorheen België, Nederland, Duitsland, Polen en meer.",
+    services: ["Internationaal meubeltransport", "Expresszendingen binnen de EU", "Distributie en logistieke oplossingen", "Betrouwbare service met tracking"],
+    contact: "Contact"
+  },
+  en: {
+    home: "Welcome to V.A. Trans Benelux",
+    slogan: "Reliable. Fast. Customer-oriented transport across Europe.",
+    about: "V.A. Trans Benelux is a European transport company focused on quality, speed, and personal service. We provide furniture transport, express deliveries, and logistics solutions across Belgium, the Netherlands, Germany, Poland, and beyond.",
+    services: ["International furniture transport", "EU express deliveries", "Distribution and logistics solutions", "Reliable service with tracking"],
+    contact: "Contact"
+  },
+  bg: {
+    home: "Добре дошли във V.A. Trans Benelux",
+    slogan: "Надежден. Бърз. Клиентски ориентиран транспорт в цяла Европа.",
+    about: "V.A. Trans Benelux е европейска транспортна фирма, фокусирана върху качество, скорост и лично обслужване. Предлагаме превоз на мебели, експресни доставки и логистични решения в Белгия, Нидерландия, Германия, Полша и други.",
+    services: ["Международен транспорт на мебели", "Експресни доставки в ЕС", "Дистрибуция и логистика", "Надеждна услуга с проследяване"],
+    contact: "Контакт"
+  }
+};
+
+// Navigatie
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const target = link.dataset.section;
+    document.querySelectorAll(".content-section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(target).classList.add("active");
+  });
+});
+
+// Taalwissel
+const buttons = document.querySelectorAll(".lang-switch button");
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const lang = btn.dataset.lang;
+    applyLanguage(lang);
+  });
+});
+
+function applyLanguage(lang) {
+  const t = translations[lang];
+  document.querySelector("#home h1").textContent = t.home;
+  document.querySelector(".slogan").textContent = t.slogan;
+  document.querySelector("#about p").textContent = t.about;
+
+  const ul = document.querySelector("#services ul");
+  ul.innerHTML = "";
+  t.services.forEach(s => {
+    const li = document.createElement("li");
+    li.textContent = s;
+    ul.appendChild(li);
+  });
+
+  document.querySelector("#contact h2").textContent = t.contact;
+}
